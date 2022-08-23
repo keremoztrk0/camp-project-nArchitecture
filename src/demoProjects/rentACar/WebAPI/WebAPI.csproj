@@ -23,10 +23,8 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Controllers\" />
-	</ItemGroup>
-
-	<ItemGroup>
+	  <ProjectReference Include="..\..\templateProject\Application\Application.csproj" />
+	  <ProjectReference Include="..\Application\Application.csproj" />
 	  <ProjectReference Include="..\Persistence\Persistence.csproj" />
 	</ItemGroup>
 
