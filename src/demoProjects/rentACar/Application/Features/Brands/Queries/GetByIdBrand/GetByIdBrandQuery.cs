@@ -33,7 +33,7 @@ namespace Application.Features.Brands.Queries.GetByIdBrand
         public async Task<BrandGetByIdDto> Handle(GetByIdBrandQuery request, CancellationToken cancellationToken)
         {
 
-            Brand brand = await _brandRepository.GetAsync(b => b.Id == request.Id);
+            Brand? brand = await _brandRepository.GetAsync(b => b.Id == request.Id);
 
             await _brandBusinessRules.BrandShouldBeExistWhenRequested(brand);
 
